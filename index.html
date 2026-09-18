@@ -2,460 +2,680 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이솝 스킨케어 | 스킨, 바디 & 핸드 케어 | Aesop 대한민국</title>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/hero.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이솝 스킨케어 | 스킨, 바디 & 핸드 케어 | Aesop 대한민국</title>
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/hero.css">
+  <link rel="stylesheet" href="./css/section1_gift.css">
 </head>
 
 <body>
-    <!-- header -->
-    <header>
-        <div class="header_i">
-            <!-- 헤더 탑 -->
-            <div class="header_top">
-                <!-- 헤더 래프트 -->
-                <nav class="header_left">
-                    <ul>
-                        <li><a href="#">매장 찾기</a></li>
-                        <li><a href="#">문의하기</a></li>
-                    </ul>
-                </nav>
+  <!-- header -->
+  <header>
+    <div class="header_i">
+      <!-- 헤더 탑 -->
+      <div class="header_top">
+        <!-- 헤더 래프트 -->
+        <nav class="header_left">
+          <ul>
+            <li><a href="#">매장 찾기</a></li>
+            <li><a href="#">문의하기</a></li>
+          </ul>
+        </nav>
 
-                <!-- 헤더 센터 -->
-                <div class="header_center">
-                    <h1 class="logo">
-                        <a href="#">
-                            <img src="./image/logo-white.png" alt="logo_white">
-                            <img src="./image/logo.png" alt="logo">
-                        </a>
-                    </h1>
-                </div>
+        <!-- 헤더 센터 -->
+        <div class="header_center">
+          <h1 class="logo">
+            <a href="#">
+              <img src="./image/logo-white.png" alt="logo_white">
+              <img src="./image/logo.png" alt="logo">
+            </a>
+          </h1>
+        </div>
 
-                <!-- 헤더 라이트 -->
-                <nav class="header_right">
-                    <ul>
-                        <li><a href="#">마이페이지</a></li>
-                        <li><button type="button">장바구니<span>(0)</span></button></li>
-                    </ul>
-                </nav>
+        <!-- 헤더 라이트 -->
+        <nav class="header_right">
+          <ul>
+            <li><a href="#">마이페이지</a></li>
+            <li><button type="button">장바구니<span>(0)</span></button></li>
+          </ul>
+        </nav>
 
-                <!-- 헤더 스크롤다운/반응형 아이콘 -->
-                <nav class="header_right_icon">
-                    <ul>
-                        <!-- 검색아이콘 -->
-                        <li class="search"><button type="button">
-                                <svg width="20" height="20" viewBox="0 0 152 152" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill="currentColor"
-                                        d="M151 143.516l-41.588-41.507c20.4-24.233 19.371-60.33-3.36-83.023-24.021-23.981-63.014-23.981-87.036 0-24.021 23.982-24.021 62.908 0 86.89 11.885 11.865 27.897 18.05 43.644 18.05 14.205 0 28.147-4.895 39.77-14.444L144.016 151l6.983-7.484zM25.432 98.453c-20.076-20.062-20.076-52.9 0-72.962 10.165-10.159 23.203-15.116 36.505-15.116 13.303 0 26.595 4.947 36.506 15.116 20.076 20.062 20.076 52.9 0 72.962-20.076 20.062-52.936 20.063-73.011 0z" />
-                                </svg>
-                            </button>
-                        </li>
+        <!-- 헤더 스크롤다운/반응형 아이콘 -->
+        <nav class="header_right_icon">
+          <ul>
+            <!-- 검색아이콘 -->
+            <li class="search"><button type="button">
+                <svg width="20" height="20" viewBox="0 0 152 152" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor"
+                    d="M151 143.516l-41.588-41.507c20.4-24.233 19.371-60.33-3.36-83.023-24.021-23.981-63.014-23.981-87.036 0-24.021 23.982-24.021 62.908 0 86.89 11.885 11.865 27.897 18.05 43.644 18.05 14.205 0 28.147-4.895 39.77-14.444L144.016 151l6.983-7.484zM25.432 98.453c-20.076-20.062-20.076-52.9 0-72.962 10.165-10.159 23.203-15.116 36.505-15.116 13.303 0 26.595 4.947 36.506 15.116 20.076 20.062 20.076 52.9 0 72.962-20.076 20.062-52.936 20.063-73.011 0z" />
+                </svg>
+              </button>
+            </li>
 
-                        <!-- 마이아이콘(반응형일때부터 보임) -->
-                        <li class="my"><button type="button">
-                                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path fill="currentColor"
-                                        d="M437.02 330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521 243.251 404 198.548 404 148 404 66.393 337.607 0 256 0S108 66.393 108 148c0 50.548 25.479 95.251 64.262 121.962-36.21 12.495-69.398 33.136-97.281 61.018C26.629 379.333 0 443.62 0 512h40c0-119.103 96.897-216 216-216s216 96.897 216 216h40c0-68.38-26.629-132.667-74.98-181.02zM256 256c-59.551 0-108-48.448-108-108S196.449 40 256 40s108 48.448 108 108-48.449 108-108 108z" />
-                                </svg>
-                            </button>
-                        </li>
+            <!-- 마이아이콘(반응형일때부터 보임) -->
+            <li class="my"><button type="button">
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M437.02 330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521 243.251 404 198.548 404 148 404 66.393 337.607 0 256 0S108 66.393 108 148c0 50.548 25.479 95.251 64.262 121.962-36.21 12.495-69.398 33.136-97.281 61.018C26.629 379.333 0 443.62 0 512h40c0-119.103 96.897-216 216-216s216 96.897 216 216h40c0-68.38-26.629-132.667-74.98-181.02zM256 256c-59.551 0-108-48.448-108-108S196.449 40 256 40s108 48.448 108 108-48.449 108-108 108z" />
+                </svg>
+              </button>
+            </li>
 
-                        <!-- 장바구니아이콘 -->
-                        <li class="cart"><button type="button">
-                                <svg width="20" height="20" viewBox="0 0 151 151" xmlns="http://www.w3.org/2000/svg">
-                                    <g stroke="#000" stroke-width=".25" fill-rule="evenodd">
-                                        <path fill="currentColor"
-                                            d="M92.298 79.303c-2.67 0-4.832-2.06-4.832-4.606V33.243c0-12.702-10.836-23.03-24.16-23.03s-24.16 10.328-24.16 23.03v41.454c0 2.545-2.161 4.606-4.831 4.606-2.67 0-4.832-2.06-4.832-4.606V33.243C29.483 15.463 44.655 1 63.306 1 81.952 1 97.13 15.463 97.13 33.243v41.454c0 2.545-2.162 4.606-4.832 4.606z" />
-                                        <path
-                                            d="M118.321 150.798H11.882c-5.983 0-10.851-5.317-10.851-11.848L1 53.72c0-3.168 1.282-6.146 3.611-8.39 2.336-2.239 5.435-3.476 8.732-3.476H116.83c6.81 0 12.343 5.317 12.343 11.86v85.236c0 6.53-4.868 11.848-10.851 11.848h0zM13.343 51.327c-.9 0-1.485.438-1.756.698a2.34 2.34 0 00-.727 1.688l.024 85.236c0 1.44.74 2.292 1.023 2.38l106.414-.005c.253-.083.992-.936.992-2.375V53.713c0-1.315-1.115-2.386-2.483-2.386H13.343z" />
-                                    </g>
-                                </svg>
-                            </button>
-                        </li>
+            <!-- 장바구니아이콘 -->
+            <li class="cart"><button type="button">
+                <svg width="20" height="20" viewBox="0 0 151 151" xmlns="http://www.w3.org/2000/svg">
+                  <g stroke="#000" stroke-width=".25" fill-rule="evenodd">
+                    <path fill="currentColor"
+                      d="M92.298 79.303c-2.67 0-4.832-2.06-4.832-4.606V33.243c0-12.702-10.836-23.03-24.16-23.03s-24.16 10.328-24.16 23.03v41.454c0 2.545-2.161 4.606-4.831 4.606-2.67 0-4.832-2.06-4.832-4.606V33.243C29.483 15.463 44.655 1 63.306 1 81.952 1 97.13 15.463 97.13 33.243v41.454c0 2.545-2.162 4.606-4.832 4.606z" />
+                    <path
+                      d="M118.321 150.798H11.882c-5.983 0-10.851-5.317-10.851-11.848L1 53.72c0-3.168 1.282-6.146 3.611-8.39 2.336-2.239 5.435-3.476 8.732-3.476H116.83c6.81 0 12.343 5.317 12.343 11.86v85.236c0 6.53-4.868 11.848-10.851 11.848h0zM13.343 51.327c-.9 0-1.485.438-1.756.698a2.34 2.34 0 00-.727 1.688l.024 85.236c0 1.44.74 2.292 1.023 2.38l106.414-.005c.253-.083.992-.936.992-2.375V53.713c0-1.315-1.115-2.386-2.483-2.386H13.343z" />
+                  </g>
+                </svg>
+              </button>
+            </li>
 
-                        <!-- 햄버거바(반응형일때부터 보임) -->
-                        <li class="ham"><button type="button">
-                                <svg width="20" height="20" viewBox="0 0 150 125" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill="currentColor"
-                                        d="M143.75 108.696H6.25c-3.442 0-6.25 3.662-6.25 8.152C0 121.338 2.808 125 6.25 125h137.5c3.442 0 6.25-3.662 6.25-8.152 0-4.49-2.808-8.152-6.25-8.152zm0-54.348H6.25C2.808 54.348 0 58.01 0 62.5c0 4.49 2.808 8.152 6.25 8.152h137.5c3.442 0 6.25-3.662 6.25-8.152 0-4.49-2.808-8.152-6.25-8.152zM6.25 16.304h137.5c3.442 0 6.25-3.662 6.25-8.152C150 3.662 147.192 0 143.75 0H6.25C2.808 0 0 3.662 0 8.152c0 4.49 2.808 8.152 6.25 8.152z" />
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <!-- 햄버거바(반응형일때부터 보임) -->
+            <li class="ham"><button type="button">
+                <svg width="20" height="20" viewBox="0 0 150 125" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor"
+                    d="M143.75 108.696H6.25c-3.442 0-6.25 3.662-6.25 8.152C0 121.338 2.808 125 6.25 125h137.5c3.442 0 6.25-3.662 6.25-8.152 0-4.49-2.808-8.152-6.25-8.152zm0-54.348H6.25C2.808 54.348 0 58.01 0 62.5c0 4.49 2.808 8.152 6.25 8.152h137.5c3.442 0 6.25-3.662 6.25-8.152 0-4.49-2.808-8.152-6.25-8.152zM6.25 16.304h137.5c3.442 0 6.25-3.662 6.25-8.152C150 3.662 147.192 0 143.75 0H6.25C2.808 0 0 3.662 0 8.152c0 4.49 2.808 8.152 6.25 8.152z" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-            <!-- 헤더 바텀 메뉴 -->
-            <nav class="header_btm">
-                <ul class="mainmenu">
-                    <!-- 첫번째li -->
-                    <li class="main_li"><a href="#">기프트 가이드</a>
-                        <div class="submenu">
-                            <ul>
-                                <li>카테고리</li>
-                                <li><a href="#">하비스트 기프트 셀렉션</a></li>
-                                <li><a href="#">시그니처 제품</a></li>
-                                <li><a href="#">기프트 번들</a></li>
-                                <li><a href="#">향수 기프트</a></li>
-                                <li><a href="#">홈 케어 기프트</a></li>
-                                <li><a href="#">트래블 기프트</a></li>
-                                <li><a href="#">기프트 전체 보기</a></li>
-                            </ul>
+      <!-- 헤더 바텀 / 메뉴 -->
+      <nav class="header_btm">
+        <ul class="mainmenu">
 
-                            <ul>
-                                <li><a href="#">
-                                        <img src="./image/submenu1.jpg" alt="sub1">
-                                        <span>기프트 보기</span>
-                                    </a></li>
-                                <li><a href="#">
-                                        <img src="./image/submenu2.jpg" alt="sub2">
-                                        <span>하비스트 기프트 셀렉션</span>
-                                    </a></li>
-                                <li><a href="#">
-                                        <img src="./image/submenu3.png" alt="sub3">
-                                        <span>기프트 파인더</span>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
+          <!-- 01 기프트 가이드 -->
+          <li class="main_li">
+            <a href="#" class="main_link">기프트 가이드</a>
 
-                    <!-- 두번째li -->
-                    <li><a href="#">신제품 & 추천 제품</a>
-                        <div class="submenu">
-                            <ul>
-                                <li>신제품</li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                            </ul>
+            <div class="submenu">
+              <div class="submenu_inner">
 
-                            <ul>
-                                <li>추천제품</li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                            </ul>
-
-                            <ul>
-                                <li><a href="#">
-                                        <img src="./image/submenu1.jpg" alt="sub1">
-                                        <span>솔리시 리플레니싱 핸드 세럼</span>
-                                    </a></li>
-                                <li><a href="#">
-                                        <img src="./image/submenu2.jpg" alt="sub2">
-                                        <span>상반된 감각의 조우</span>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- 세번째li -->
-                    <li><a href="#">스킨 케어</a>
-                        <div class="submenu">
-                            <ul>
-                                <li>카테고리</li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                            </ul>
-
-                            <ul>
-                                <li>피부 상태</li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                            </ul>
-
-                            <ul>
-                                <li>피부 타입</li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                            </ul>
-
-                            <ul>
-                                <li>성분</li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                                <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
-                            </ul>
-
-                            <ul>
-                                <li><a href="#">
-                                        <img src="./image/submenu1.jpg" alt="sub1">
-                                        <span>계절별 스킨케어</span>
-                                    </a></li>
-                                <li><a href="#">
-                                        <img src="./image/submenu2.jpg" alt="sub2">
-                                        <span>내 피부 이해하기</span>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- 네번째li -->
-                    <li><a href="#">핸드 & 바디</a>
-                        <div class="submenu">
-                            <ul>
-                                <li>카테고리</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li>사랑받는 제품</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li><a href="#">
-                                        <img src="./image/submenu1.jpg" alt="sub1">
-                                        <span>계절별 스킨케어</span>
-                                    </a></li>
-                                <li><a href="#">
-                                        <img src="./image/submenu2.jpg" alt="sub2">
-                                        <span>내 피부 이해하기</span>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- 다섯번째li -->
-                    <li><a href="#">향수</a>
-                        <div class="submenu">
-                            <ul>
-                                <li>카테고리</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li>신제품</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li><a href="#">
-                                        <img src="./image/submenu1.jpg" alt="sub1">
-                                        <span>계절별 스킨케어</span>
-                                    </a></li>
-                                <li><a href="#">
-                                        <img src="./image/submenu2.jpg" alt="sub2">
-                                        <span>내 피부 이해하기</span>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- 여섯번째li -->
-                    <li><a href="#">홈</a>
-                        <div class="submenu">
-                            <ul>
-                                <li>카테고리</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li>신제품</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li><a href="#">
-                                        <img src="./image/submenu1.jpg" alt="sub1">
-                                        <span>계절별 스킨케어</span>
-                                    </a></li>
-                                <li><a href="#">
-                                        <img src="./image/submenu2.jpg" alt="sub2">
-                                        <span>내 피부 이해하기</span>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- 일곱번째li -->
-                    <li><a href="#">헤어</a>
-                        <div class="submenu">
-                            <ul>
-                                <li>카테고리</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li>조화로운 셀렉션</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li><a href="#">
-                                        <img src="./image/submenu1.jpg" alt="sub1">
-                                        <span>계절별 스킨케어</span>
-                                    </a></li>
-                                <li><a href="#">
-                                        <img src="./image/submenu2.jpg" alt="sub2">
-                                        <span>내 피부 이해하기</span>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- 여덟번째li -->
-                    <li><a href="#">트래블</a>
-                        <div class="submenu">
-                            <ul>
-                                <li>카테고리</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li>신제품</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li><a href="#">
-                                        <img src="./image/submenu1.jpg" alt="sub1">
-                                        <span>계절별 스킨케어</span>
-                                    </a></li>
-                                <li><a href="#">
-                                        <img src="./image/submenu2.jpg" alt="sub2">
-                                        <span>내 피부 이해하기</span>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- 아홉번째li -->
-                    <li><a href="#">라이브러리</a>
-                        <div class="submenu">
-                            <ul>
-                                <li>카테고리</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li>A to Z 시티 가이드</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-
-                            <ul>
-                                <li>이솝 소개</li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                                <li><a href="#">핸드 워시 & 밤</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- 열번째li -->
-                    <li><a href="#">경험하기</a>
-                        <div class="submenu">
-                            <ul>
-                                <li><a href="#">
-                                        <img src="./image/submenu1.jpg" alt="sub1">
-                                        <span>계절별 스킨케어</span>
-                                    </a></li>
-                                <li><a href="#">
-                                        <img src="./image/submenu2.jpg" alt="sub2">
-                                        <span>내 피부 이해하기</span>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </li>
+                <ul class="submenu_list">
+                  <li class="submenu_title">카테고리</li>
+                  <li><a href="#">하비스트 기프트 셀렉션</a></li>
+                  <li><a href="#">시그니처 제품</a></li>
+                  <li><a href="#">기프트 번들</a></li>
+                  <li><a href="#">향수 기프트</a></li>
+                  <li><a href="#">홈 케어 기프트</a></li>
+                  <li><a href="#">트래블 기프트</a></li>
+                  <li><a href="#">기프트 전체 보기</a></li>
                 </ul>
 
-                <button class="search_box" type="button">
-                    <!-- 검색svg아이콘 -->
-                    <svg width="16" height="16" viewBox="0 0 152 152" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="currentColor"
-                            d="M151 143.516l-41.588-41.507c20.4-24.233 19.371-60.33-3.36-83.023-24.021-23.981-63.014-23.981-87.036 0-24.021 23.982-24.021 62.908 0 86.89 11.885 11.865 27.897 18.05 43.644 18.05 14.205 0 28.147-4.895 39.77-14.444L144.016 151l6.983-7.484zM25.432 98.453c-20.076-20.062-20.076-52.9 0-72.962 10.165-10.159 23.203-15.116 36.505-15.116 13.303 0 26.595 4.947 36.506 15.116 20.076 20.062 20.076 52.9 0 72.962-20.076 20.062-52.936 20.063-73.011 0z" />
-                    </svg>
-                    <span>검색</span>
-                </button>
-            </nav>
-        </div>
-    </header>
-    <!-- header -->
+                <ul class="submenu_visual">
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu1.jpg" alt="">
+                      <span>기프트 보기</span>
+                    </a>
+                  </li>
 
-    <!-- hero -->
-    <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="./mv/aesop_hero.mp4" type="video/mp4">
-        </video>
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu2.jpg" alt="">
+                      <span>하비스트 기프트 셀렉션</span>
+                    </a>
+                  </li>
 
-        <div class="hero_i">
-            <span>이솝 하비스트 캠페인</span>
-            <h2>서로의 유대가 영그는 계절</h2>
-            <p>
-                하나되어 모여 앉는 추석, 사람들 사이 엮인 시간과 정성을 가만히 떠올려 봅니다. <br>
-                올가을에는&nbsp;낱낱의&nbsp;짚을&nbsp;한&nbsp;올&nbsp;한&nbsp;올&nbsp;엮어내는&nbsp;짚풀공예와&nbsp;함께&nbsp;한&nbsp;지붕&nbsp;아래&nbsp;깃드는&nbsp;안온함과&nbsp;이웃의&nbsp;온정을&nbsp;이야기합니다.&nbsp;&nbsp;
-            </p>
-            <a class="more" href="#">
-                <div class="text">
-                    <span>자세히 알아보기</span>
-                    <svg width="16" height="14" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="currentColor"
-                            d="M8.36.56l5.307 5.444-5.307 5.39H6.6l4.8-4.767H.333v-1.3H11.4L6.6.56h1.76z" fill="#333" />
-                    </svg>
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu3.png" alt="">
+                      <span>기프트 파인더</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </li>
+
+
+          <!-- 02 신제품 & 추천 제품 -->
+          <li class="main_li">
+            <a href="#" class="main_link">신제품 & 추천 제품</a>
+
+            <div class="submenu">
+              <div class="submenu_inner">
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">신제품</li>
+                  <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
+                  <li><a href="#">솔리시 리플레니싱 핸드 세럼</a></li>
+                  <li><a href="#">레졸루트 페이셜 컨센트레이트</a></li>
+                  <li><a href="#">퀸티센셜 프래그런스 트리오</a></li>
+                  <li><a href="#">어보브 어스, 스테오라 오 드 퍼퓸</a></li>
+                  <li><a href="#">루센트 페이셜 리파이너</a></li>
+                  <li><a href="#">엘레오스 너리싱 바디 클렌저</a></li>
+                </ul>
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">추천제품</li>
+                  <li><a href="#">레저렉션 아로마틱 핸드 워시</a></li>
+                  <li><a href="#">레버런스 아로마틱 핸드 워시</a></li>
+                  <li><a href="#">레저렉션 아로마틱 핸드 밤</a></li>
+                  <li><a href="#">제라늄 리프 바디 클렌저</a></li>
+                  <li><a href="#">테싯 오 드 퍼퓸</a></li>
+                </ul>
+
+                <ul class="submenu_visual">
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu1.jpg" alt="">
+                      <span>솔리시 리플레니싱 핸드 세럼</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu2.jpg" alt="">
+                      <span>상반된 감각의 조우</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </li>
+
+
+          <!-- 03 스킨 케어 -->
+          <li class="main_li">
+            <a href="#" class="main_link">스킨 케어</a>
+
+            <div class="submenu">
+              <div class="submenu_inner">
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">카테고리</li>
+                  <li><a href="#">클렌저</a></li>
+                  <li><a href="#">토너</a></li>
+                  <li><a href="#">컨센트레이트 & 세럼</a></li>
+                  <li><a href="#">모이스처라이저</a></li>
+                  <li><a href="#">립 & 아이</a></li>
+                  <li><a href="#">선 케어</a></li>
+                  <li><a href="#">각질 제거 & 마스크</a></li>
+                  <li><a href="#">쉐이빙</a></li>
+                  <li><a href="#">스킨 케어 전체 보기</a></li>
+                </ul>
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">피부 상태</li>
+                  <li><a href="#">칙칙함</a></li>
+                  <li><a href="#">에이징</a></li>
+                  <li><a href="#">피부 톤 & 결</a></li>
+                  <li><a href="#">모공 & 트러블</a></li>
+                  <li><a href="#">수분 부족</a></li>
+                </ul>
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">피부 타입</li>
+                  <li><a href="#">중성 피부</a></li>
+                  <li><a href="#">건성 피부</a></li>
+                  <li><a href="#">지성 피부</a></li>
+                  <li><a href="#">복합성 피부</a></li>
+                  <li><a href="#">민감성</a></li>
+                </ul>
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">성분</li>
+                  <li><a href="#">비타민 C</a></li>
+                  <li><a href="#">레티노에이트</a></li>
+                  <li><a href="#">판테놀</a></li>
+                  <li><a href="#">파슬리 씨드</a></li>
+                  <li><a href="#">위치 하젤</a></li>
+                </ul>
+
+                <ul class="submenu_visual">
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu1.jpg" alt="">
+                      <span>계절별 스킨케어</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu2.jpg" alt="">
+                      <span>내 피부 이해하기</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </li>
+
+
+          <!-- 04 핸드 & 바디 -->
+          <li class="main_li">
+            <a href="#" class="main_link">핸드 & 바디</a>
+
+            <div class="submenu">
+              <div class="submenu_inner">
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">카테고리</li>
+                  <li><a href="#">핸드 워시 & 밤</a></li>
+                  <li><a href="#">바 솝</a></li>
+                  <li><a href="#">바디 클렌저 & 스크럽</a></li>
+                  <li><a href="#">바디 밤 & 오일</a></li>
+                  <li><a href="#">데오도란트</a></li>
+                  <li><a href="#">핸드 & 바디 케어 키트</a></li>
+                  <li><a href="#">핸드 & 바디 전체 보기</a></li>
+                </ul>
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">사랑받는 제품</li>
+                  <li><a href="#">안티서시스 인텐스 바디 클렌저</a></li>
+                  <li><a href="#">레저렉션 아로마틱 핸드 워시</a></li>
+                  <li><a href="#">엘레오스 아로마틱 핸드 밤</a></li>
+                </ul>
+
+                <ul class="submenu_visual">
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu1.jpg" alt="">
+                      <span>핸드 & 바디 파인더</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu2.jpg" alt="">
+                      <span>상반된 감각의 조우</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </li>
+
+
+          <!-- 05 향수 -->
+          <li class="main_li">
+            <a href="#" class="main_link">향수</a>
+
+            <div class="submenu">
+              <div class="submenu_inner">
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">카테고리</li>
+                  <li><a href="#">플로럴</a></li>
+                  <li><a href="#">프레시</a></li>
+                  <li><a href="#">우디</a></li>
+                  <li><a href="#">오퓰런트</a></li>
+                  <li><a href="#">향수 전체 보기</a></li>
+                </ul>
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">신제품</li>
+                  <li><a href="#">퀀티센셜 프래그런스 트리오</a></li>
+                  <li><a href="#">어보브 어스, 스테오라 오 드 퍼퓸</a></li>
+                  <li><a href="#">오르너 오 드 퍼퓸</a></li>
+                  <li><a href="#">비레레 오 드 퍼퓸</a></li>
+                </ul>
+
+                <ul class="submenu_visual">
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu1.jpg" alt="">
+                      <span>향수 둘러보기 </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu2.jpg" alt="">
+                      <span>프레그런스 파인더</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </li>
+
+
+          <!-- 06 홈 -->
+          <li class="main_li">
+            <a href="#" class="main_link">홈</a>
+
+            <div class="submenu">
+              <div class="submenu_inner">
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">카테고리</li>
+                  <li><a href="#">룸 스프레이</a></li>
+                  <li><a href="#">인센스</a></li>
+                  <li><a href="#">캔들</a></li>
+                  <li><a href="#">오일 버너 블렌드</a></li>
+                  <li><a href="#">디자인 오브제</a></li>
+                  <li><a href="#">탈취제 & 반려동물</a></li>
+                  <li><a href="#">홈 전체 보기</a></li>
+                </ul>
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">사랑받는 제품</li>
+                  <li><a href="#">올루스 아로마틱 룸 스프레이</a></li>
+                  <li><a href="#">포스트-푸 드롭스</a></li>
+                  <li><a href="#">프톨레미 아로마틱 캔들</a></li>
+                </ul>
+
+                <ul class="submenu_visual">
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu1.jpg" alt="">
+                      <span>홈 둘러보기</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu2.jpg" alt="">
+                      <span>내면의 세계를 일깨우는 아로마</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </li>
+
+
+          <!-- 07 헤어 -->
+          <li class="main_li">
+            <a href="#" class="main_link">헤어</a>
+
+            <div class="submenu">
+              <div class="submenu_inner">
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">카테고리</li>
+                  <li><a href="#">샴푸 & 컨디셔너</a></li>
+                  <li><a href="#">헤어 트리트먼트</a></li>
+                  <li><a href="#">그루밍</a></li>
+                  <li><a href="#">헤어 전체 보기</a></li>
+                </ul>
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">조화로운 셀렉션</li>
+                  <li><a href="#">샴푸</a></li>
+                  <li><a href="#">컨디셔너</a></li>
+                  <li><a href="#">테임 헤어 세럼</a></li>
+                </ul>
+
+                <ul class="submenu_visual">
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu1.jpg" alt="">
+                      <span>헤어 둘러보기</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </li>
+
+
+          <!-- 08 트래블 -->
+          <li class="main_li">
+            <a href="#" class="main_link">트래블</a>
+
+            <div class="submenu">
+              <div class="submenu_inner">
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">카테고리</li>
+                  <li><a href="#">기내 필수품</a></li>
+                  <li><a href="#">출퇴근 필수품</a></li>
+                  <li><a href="#">트래블 키트</a></li>
+                  <li><a href="#">트래블 전체 보기</a></li>
+                </ul>
+
+                <ul class="submenu_list">
+                  <li class="submenu_title">신제품</li>
+                  <li><a href="#">퀀티센셜 프래그런스 트리오</a></li>
+                </ul>
+
+                <ul class="submenu_visual">
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu1.jpg" alt="">
+                      <span>트래블 둘러보기</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu2.jpg" alt="">
+                      <span>공식몰 단독 출시:권티센셜 트리오</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </li>
+
+
+          <!-- 09 라이브러리 -->
+          <li class="main_li library">
+            <a href="#" class="main_link">라이브러리</a>
+
+            <div class="submenu">
+              <div class="submenu_inner">
+                <div class="submenu_top">
+                  <ul class="submenu_list">
+                    <li class="submenu_title">카테고리</li>
+                    <li><a href="#">문학과 문화</a></li>
+                    <li><a href="#">제품과 가이드</a></li>
+                    <li><a href="#">건축과 디자인</a></li>
+                    <li><a href="#">사운드와 비전</a></li>
+                    <li><a href="#">스토리 전체 보기</a></li>
+                  </ul>
+
+                  <ul class="submenu_list">
+                    <li class="submenu_title">A to Z 시티 가이드</li>
+                    <li><a href="#">서울</a></li>
+                    <li><a href="#">모든 가이드 보기</a></li>
+                  </ul>
+
+                  <ul class="submenu_list">
+                    <li class="submenu_title">이솝 소개</li>
+                    <li><a href="#">브랜드 스토리</a></li>
+                    <li><a href="#">디자인 철학</a></li>
+                    <li><a href="#">제품 철학</a></li>
+                  </ul>
                 </div>
-            </a>
+
+                <div class="line"></div>
+
+                <div class="submenu_btm">
+                  <ul class="submenu_visual">
+                    <li>
+                      <a href="#">
+                        <img src="./image/submenu1.jpg" alt="">
+                        <p class="submenu_visual_title">Film</p>
+                        <span class="text">
+                          &lt;더 솝 서비스&gt;:영화에서 영감을 받은 선물로 전하는 스펙터클한 경험
+                        </span>
+                        <span class="time">2분 시청</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#">
+                        <img src="./image/submenu1.jpg" alt="">
+                        <p class="submenu_visual_title">Culture</p>
+                        <span class="text">
+                          A to Z 시티 가이드 | 서울
+                        </span>
+                        <span class="time">5분 독서</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#">
+                        <img src="./image/submenu1.jpg" alt="">
+                        <p class="submenu_visual_title">Playlist</p>
+                        <span class="text">
+                          이솝의 사운드
+                        </span>
+                        <span class="time">3분 독서</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+
+          <!-- 10 경험하기 -->
+          <li class="main_li">
+            <a href="#" class="main_link">경험하기</a>
+
+            <div class="submenu">
+              <div class="submenu_inner">
+
+                <ul class="submenu_visual">
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu1.jpg" alt="">
+                      <span>기업체 구매</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <img src="./image/submenu2.jpg" alt="">
+                      <span>온라인 서비스</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </li>
+        </ul>
+
+
+        <button class="search_box" type="button">
+          <!-- 검색svg아이콘 -->
+          <svg width="16" height="16" viewBox="0 0 152 152" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor"
+              d="M151 143.516l-41.588-41.507c20.4-24.233 19.371-60.33-3.36-83.023-24.021-23.981-63.014-23.981-87.036 0-24.021 23.982-24.021 62.908 0 86.89 11.885 11.865 27.897 18.05 43.644 18.05 14.205 0 28.147-4.895 39.77-14.444L144.016 151l6.983-7.484zM25.432 98.453c-20.076-20.062-20.076-52.9 0-72.962 10.165-10.159 23.203-15.116 36.505-15.116 13.303 0 26.595 4.947 36.506 15.116 20.076 20.062 20.076 52.9 0 72.962-20.076 20.062-52.936 20.063-73.011 0z" />
+          </svg>
+          <span>검색</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <!-- header -->
+
+  <!-- hero -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="./mv/aesop_hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero_i">
+      <span>이솝 하비스트 캠페인</span>
+      <h2>서로의 유대가 영그는 계절</h2>
+      <p>
+        하나되어 모여 앉는 추석, 사람들 사이 엮인 시간과 정성을 가만히 떠올려 봅니다. <br>
+        올가을에는&nbsp;낱낱의&nbsp;짚을&nbsp;한&nbsp;올&nbsp;한&nbsp;올&nbsp;엮어내는&nbsp;짚풀공예와&nbsp;함께&nbsp;한&nbsp;지붕&nbsp;아래&nbsp;깃드는&nbsp;안온함과&nbsp;이웃의&nbsp;온정을&nbsp;이야기합니다.&nbsp;&nbsp;
+      </p>
+      <a class="more" href="#">
+        <div class="more_i">
+          <span>자세히 알아보기</span>
+          <svg width="16" height="14" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M8.36.56l5.307 5.444-5.307 5.39H6.6l4.8-4.767H.333v-1.3H11.4L6.6.56h1.76z"
+              fill="#333" />
+          </svg>
         </div>
-    </section>
-    <!-- hero -->
+      </a>
+    </div>
+  </section>
+  <!-- hero -->
+
+  <!-- section1 기프트 셀렉션 -->
+  <section class="gift">
+    <div class="gift_left">
+      <img src="./image/gift.jpg" alt="gift">
+    </div>
+
+    <div class="gift_right">
+      <div class="textbox">
+        <span class="section_hero">하비스트 기프트 셀렉션</span>
+        <h2 class="section_title">진심과 진심을 엮어</h2>
+        <p class="section_desc">
+          모든 만남의 순간에 어울리는 이솝의 핸드 케어 제품을 무료 보자기 포장 서비스와 함께 전해 보세요.
+        </p>
+      </div>
+
+      <a class="show" href="#">
+        <div class="show_i">
+          <span>기프트 셀렉션 보기</span>
+          <svg width="16" height="14" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M8.36.56l5.307 5.444-5.307 5.39H6.6l4.8-4.767H.333v-1.3H11.4L6.6.56h1.76z"
+              fill="#333" />
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
+  <!-- section1 기프트 셀렉션 -->
+
+
+  <!-- section2 바디 케어 -->
+  <section class="bodycare">
+
+  </section>
+  <!-- section2 바디 케어 -->
+
+
+  <!-- section3 핸드 & 바디 -->
+  <section class="hand_body">
+
+  </section>
+  <!-- section3 핸드 & 바디 -->
+
+
+  <!-- section4 장인의 손길 -->
+  <section class="master_hand">
+
+  </section>
+  <!-- section4 장인의 손길 -->
+
+
+  <!-- section5 향수 프로모션 -->
+  <section class="perfume">
+
+  </section>
+  <!-- section5 향수 프로모션 -->
+
+
+  <!-- section6 시그니처 기프팅 -->
+  <section class="signature">
+
+  </section>
+  <!-- section6 시그니처 기프팅 -->
+
+
+  <!-- footer -->
+  <!-- footer -->
 </body>
 
 </html>

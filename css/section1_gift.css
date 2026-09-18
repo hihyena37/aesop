@@ -1,0 +1,77 @@
+/* =========================
+   01. 섹션1 기프트
+========================= */
+.gift {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  gap: 46px;
+
+  margin-bottom: 100px;
+}
+
+
+/* =========================
+   02. 기프트 래프트
+========================= */
+.gift_left {
+  width: calc((100%/5)*3);
+}
+
+
+/* =========================
+   03. 기프트 라이트
+========================= */
+.gift_right {
+  width: calc((100%/5)*2);
+  padding-right: 8%;
+}
+
+.gift_right .textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section_hero {
+  font-size: 14px;
+}
+
+.section_title {
+  font-size: 31px;
+  font-weight: 400;
+}
+
+
+/* =========================
+   04. 쇼 / 보러가기 버튼
+========================= */
+.show {
+  display: block;
+
+  width: 202px;
+  height: 48px;
+  border: 1px solid rgba(51, 51, 51, .2);
+  align-content: center;
+  background-color: transparent;
+
+  transition: .3s;
+
+  margin-top: 20px;
+}
+
+.gift_right .show:hover {
+  color: #FFFEF2;
+  background-color: #333;
+}
+
+
+.show_i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  font-size: 14px;
+}

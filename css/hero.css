@@ -1,9 +1,14 @@
+/* =========================
+   01. 히어로
+========================= */
 .hero{
     width: 100%;
     height: 110vh;
     overflow: hidden;
 
     position: relative;
+
+    margin-bottom: 200px;
 }
 
 .hero-video {
@@ -16,6 +21,9 @@
   z-index: -1;
 }
 
+/* =========================
+   02. 히어로 이너 (텍스트)
+========================= */
 .hero_i{
     width: 100%;
 
@@ -25,11 +33,11 @@
 
     position: absolute;
     z-index: 1;
-    top: 60%;
+    top: 80%;
     left: 50%;
     translate: -50% -50%;
     text-align: center;
-    color: white;
+    color: #FFFEF2;
     font-size: 14px;
 }
 
@@ -37,18 +45,33 @@
     font-size: 31px;
 }
 
-.hero_i .more{
+
+/* =========================
+   03. 몰 / 알아보기 버튼
+========================= */
+.more{
     display: block;
 
     width: 390px;
     height: 48px;
-    border: 1.5px solid #fff;
+    border: 1.5px solid #FFFEF2;
     align-content: center;
+
+    transition: .3s;
 
     margin: auto;
 }
 
-.hero_i .more .text{
+.more:hover{
+  background-color: #FFFEF2;
+  color: #333;
+}
+
+.more:hover svg{
+  color: #FFFEF2;
+}
+
+.more .more_i{
     display: flex;
     align-items: center;
     justify-content: center;
