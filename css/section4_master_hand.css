@@ -1,9 +1,10 @@
 /* =========================
-   01. 섹션1 기프트
+   01. 섹션4 장인의 손길
 ========================= */
-.gift {
+.master_hand {
   width: 100%;
   height: auto;
+  background-color: #E5DFDC;
 
   display: flex;
   gap: 46px;
@@ -13,22 +14,14 @@
 
 
 /* =========================
-   02. 기프트 래프트
+   02. 장인의 손길 래프트
 ========================= */
-.gift_left {
-  width: calc((100%/5)*3);
-}
-
-
-/* =========================
-   03. 기프트 라이트
-========================= */
-.gift_right {
+.master_hand_left {
   width: calc((100%/5)*2);
-  padding-right: 8%;
+  padding-left: 8%;
 }
 
-.gift_right .textbox {
+.master_hand_left .textbox {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -43,6 +36,12 @@
   font-weight: 400;
 }
 
+/* =========================
+   03. 장인의 손길 라이트
+========================= */
+.master_hand_right {
+  width: calc((100%/5)*3);
+}
 
 /* =========================
    04. 쇼 / 보러가기 버튼

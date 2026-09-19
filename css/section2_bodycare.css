@@ -1,9 +1,10 @@
 /* =========================
-   01. 섹션1 기프트
+   01. 섹션1 바디케어
 ========================= */
-.gift {
+.bodycare {
   width: 100%;
   height: auto;
+  background-color: #E5DFDC;
 
   display: flex;
   gap: 46px;
@@ -13,22 +14,14 @@
 
 
 /* =========================
-   02. 기프트 래프트
+   02. 바디케어 래프트
 ========================= */
-.gift_left {
-  width: calc((100%/5)*3);
-}
-
-
-/* =========================
-   03. 기프트 라이트
-========================= */
-.gift_right {
+.bodycare_left {
   width: calc((100%/5)*2);
-  padding-right: 8%;
+  padding-left: 8%;
 }
 
-.gift_right .textbox {
+.bodycare_left .textbox {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -43,6 +36,12 @@
   font-weight: 400;
 }
 
+/* =========================
+   03. 바디케어 라이트
+========================= */
+.bodycare_right {
+  width: calc((100%/5)*3);
+}
 
 /* =========================
    04. 쇼 / 보러가기 버튼

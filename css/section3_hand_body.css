@@ -1,0 +1,193 @@
+/* =========================
+   01. 섹션3 핸드 & 바디
+========================= */
+.hand_body {
+  width: 100%;
+  height: auto;
+
+  padding: 100px 0;
+}
+
+.hand_body_i {
+  max-width: 1280px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.hand_body_i .textbox {
+  text-align: center;
+}
+
+.hand_body_i .textbox .section_title,
+.hand_body_i .textbox .section_hero {
+  margin-bottom: 12px;
+}
+
+/* =========================
+   02. 올박스
+========================= */
+.allbox {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+/* 창문 */
+.view {
+  width: 1168px;
+  overflow: hidden;
+}
+
+/* =========================
+   03. 올카드(필름띠)
+========================= */
+.allcard {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* =========================
+   04. 카드
+========================= */
+.card {
+  width: 376px;
+  flex-shrink: 0;
+}
+
+.card .imgbox {
+  position: relative;
+  width: 100%;
+  height: 376px;
+}
+
+.card .imgbox .img_desc {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  font-size: 11px;
+  color: #AB7E51;
+}
+
+.card .imgbox a{
+  display: block;
+  width: 130px;
+  height: 48px;
+  border: 0.5px solid #33333345;
+  text-align: center;
+  align-content: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  opacity: 0;
+}
+
+.card .imgbox a:hover{
+  background-color: #333;
+  color: #fffef2;
+}
+
+.card .imgbox img{
+  position: absolute;
+}
+
+.card .imgbox .hoverimg{
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card .imgbox:hover .hoverimg{
+  opacity: 1;
+}
+
+.card .imgbox:hover a{
+  opacity: 1;
+}
+
+.cardtext {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* =========================
+   05. 화살표
+========================= */
+.arrow {
+  width: 40px;
+  height: 30px;
+  color: #333;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow:disabled {
+  color: #666;
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   06. 사이즈 선택박스
+========================= */
+.select_box {
+  position: relative;
+  width: 376px;
+}
+
+.select_box label {
+  position: absolute;
+  top: -8px;
+  left: 16px;
+
+  padding: 0 4px;
+  background: #fffef2;
+
+  font-size: 12px;
+  color: #666;
+  z-index: 1;
+}
+
+.select_box select {
+  width: 100%;
+  height: 42px;
+  padding: 0 20px;
+
+  border: 1px solid #d8d8cf;
+  background: #fffef2;
+
+  font-size: 14px;
+  color: #333;
+
+  appearance: none;
+  cursor: pointer;
+}
+
+/* 밑으로 화살표 */
+.select_box::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  border-right: 3px solid #333;
+  border-bottom: 3px solid #333;
+
+  transform: translateY(-65%) rotate(45deg);
+
+  pointer-events: none;
+  /* 마우스 클릭이나 hover 이벤트를 받지 않게 */
+}

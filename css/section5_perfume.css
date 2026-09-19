@@ -1,7 +1,7 @@
 /* =========================
-   01. 섹션1 기프트
+   01. 섹션5 퍼퓸
 ========================= */
-.gift {
+.perfume {
   width: 100%;
   height: auto;
 
@@ -13,22 +13,22 @@
 
 
 /* =========================
-   02. 기프트 래프트
+   02. 퍼퓸 래프트
 ========================= */
-.gift_left {
+.perfume_left {
   width: calc((100%/5)*3);
 }
 
 
 /* =========================
-   03. 기프트 라이트
+   03. 퍼퓸 라이트
 ========================= */
-.gift_right {
+.perfume_right {
   width: calc((100%/5)*2);
   padding-right: 8%;
 }
 
-.gift_right .textbox {
+.perfume_right .textbox {
   display: flex;
   flex-direction: column;
   gap: 12px;
