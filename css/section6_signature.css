@@ -1,0 +1,78 @@
+/* =========================
+   01. 섹션6 시그니처 기프팅
+========================= */
+.signature {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  gap: 46px;
+
+  padding: 100px 0;
+}
+
+
+/* =========================
+   02. 시그니처 기프팅 래프트
+========================= */
+.signature_left {
+  width: calc((100%/5)*2);
+  padding-left: 8%;
+}
+
+.signature_left .textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section_hero {
+  font-size: 14px;
+}
+
+.section_title {
+  font-size: 31px;
+  font-weight: 400;
+}
+
+/* =========================
+   03. 시그니처 기프팅 라이트
+========================= */
+.signature_right {
+  width: calc((100%/5)*3);
+  height: 540px;
+  overflow: hidden;
+}
+
+
+/* =========================
+   04. 쇼 / 보러가기 버튼
+========================= */
+.show {
+  display: block;
+
+  width: 202px;
+  height: 48px;
+  border: 1px solid rgba(51, 51, 51, .2);
+  align-content: center;
+  background-color: transparent;
+
+  transition: .3s;
+
+  margin-top: 20px;
+}
+
+.show:hover {
+  color: #FFFEF2;
+  background-color: #333;
+}
+
+
+.show_i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  font-size: 14px;
+}

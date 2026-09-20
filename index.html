@@ -13,6 +13,10 @@
   <link rel="stylesheet" href="./css/section3_hand_body.css">
   <link rel="stylesheet" href="./css/section4_master_hand.css">
   <link rel="stylesheet" href="./css/section5_perfume.css">
+  <link rel="stylesheet" href="./css/section6_signature.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <script src="./js/jquery-4.0.0.min.js"></script>
+  <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -782,9 +786,9 @@
 
                 <div class="text_btm">
                   <!-- 사이즈 선택박스 -->
-                  <div class="onesize">
-                    <p>한 가지 사이즈</p>
-                    <p>30mL</p>
+                  <div class="onesize_box">
+                    <span class="onesize">한 가지 사이즈</span>
+                    <span class="ml">180mL</span>
                   </div>
                   <p class="price">49,000원</p>
                   <button class="add" type="button">
@@ -798,15 +802,17 @@
             <div class="card">
               <div class="imgbox">
                 <span class="img_desc">추천 제품</span>
-                <img src="./image/hand_body1.png" alt="h1">
+                <img src="./image/hand_body4.png" alt="h4">
+                <img class="hoverimg" src="./image/hand_body_hover4.png" alt="hover4">
+                <a href="#">더 알아보기</a>
               </div>
 
               <div class="cardtext">
                 <p class="card_title">
-                  레저렉션 아로마틱 핸드워시
+                  레저렉션 아로마틱 핸드 밤
                 </p>
                 <span class="card_desc">
-                  깔끔한, 거품이 적은, 젤 타입
+                  시트러스, 우드, 허브
                 </span>
 
                 <div class="text_btm">
@@ -814,11 +820,11 @@
                   <div class="select_box">
                     <label for="size">사이즈</label>
                     <select id="size">
-                      <option>500mL (펌프 포함)</option>
-                      <option>500mL (펌프 미포함)</option>
+                      <option>75mL</option>
+                      <option>500mL</option>
                     </select>
                   </div>
-                  <p class="price">56,000원</p>
+                  <p class="price">39,000원</p>
                   <button class="add" type="button">
                     장바구니에 담기
                   </button>
@@ -829,28 +835,27 @@
             <!-- 카드5 -->
             <div class="card">
               <div class="imgbox">
-                <span class="img_desc">추천 제품</span>
-                <img src="./image/hand_body1.png" alt="h1">
+                <span class="img_desc">신제품</span>
+                <img src="./image/hand_body5.png" alt="h5">
+                <img class="hoverimg" src="./image/hand_body_hover5.png" alt="hover5">
+                <a href="#">더 알아보기</a>
               </div>
 
               <div class="cardtext">
                 <p class="card_title">
-                  레저렉션 아로마틱 핸드워시
+                  솔리시 리플레니싱 핸드 세럼
                 </p>
                 <span class="card_desc">
-                  깔끔한, 거품이 적은, 젤 타입
+                  손의 다크스팟 개선에 효과적
                 </span>
 
                 <div class="text_btm">
                   <!-- 사이즈 선택박스 -->
-                  <div class="select_box">
-                    <label for="size">사이즈</label>
-                    <select id="size">
-                      <option>500mL (펌프 포함)</option>
-                      <option>500mL (펌프 미포함)</option>
-                    </select>
+                  <div class="onesize_box">
+                    <span class="onesize">한 가지 사이즈</span>
+                    <span class="ml">30mL</span>
                   </div>
-                  <p class="price">56,000원</p>
+                  <p class="price">58,000원</p>
                   <button class="add" type="button">
                     장바구니에 담기
                   </button>
@@ -937,12 +942,190 @@
 
   <!-- section6 시그니처 기프팅 -->
   <section class="signature">
+    <div class="signature_left">
+      <div class="textbox">
+        <span class="section_hero">누구에게나, 어떤 마음을 전하든</span>
+        <h2 class="section_title">공식 온라인 몰만의 특별한 서비스</h2>
+        <p class="section_desc">
+          모든 주문에 무료 배송·반품, 코튼백 선물 포장, 샘플 증정 등 온라인 몰만의 혜택을 누려보세요. <br>
+          이솝의 오프라인 공간이 그러하듯, 온라인 몰 역시 정성껏 맞이하겠습니다.
+        </p>
+      </div>
 
+      <a class="show" href="#">
+        <div class="show_i">
+          <span>이솝의 시그니처 기프팅</span>
+          <svg width="16" height="14" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M8.36.56l5.307 5.444-5.307 5.39H6.6l4.8-4.767H.333v-1.3H11.4L6.6.56h1.76z"
+              fill="#333" />
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <div class="signature_right">
+      <video class="signature-video" autoplay muted loop playsinline>
+        <source src="./mv/signature.mp4" type="video/mp4">
+      </video>
+    </div>
   </section>
   <!-- section6 시그니처 기프팅 -->
 
 
   <!-- footer -->
+  <footer>
+    <div class="footer_i">
+      <!-- 푸터탑 -->
+      <div class="footer_top">
+        <p>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.2286 19.7849V12.443L4.80052 8.7207V16.0625L11.2286 19.7849ZM12.7713 19.7849L19.1993 16.0625V8.7207L12.7713 12.443V19.7849ZM11.9999 22L3.25781 16.9743V7.0257L11.9999 2L20.742 7.0257V16.9743L11.9999 22ZM15.9655 8.81172L18.3509 7.44303L11.9999 3.77211L9.60866 5.14673L15.9655 8.81172ZM11.9999 11.1139L14.3912 9.72944L8.04025 6.05851L5.64899 7.44303L11.9999 11.1139Z"
+              fill="#FFFEF2" />
+          </svg>
+          <span>무료 배송</span>
+        </p>
+
+        <p>
+
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M4.5 21.4999V8.49995H7.5V6.49995C7.5 5.25125 7.93782 4.18908 8.81345 3.31345C9.6891 2.43782 10.7513 2 12 2C13.2487 2 14.3109 2.43782 15.1865 3.31345C16.0621 4.18908 16.5 5.25125 16.5 6.49995V8.49995H19.5V21.4999H4.5ZM5.99997 19.9999H18V9.99993H5.99997V19.9999ZM12 16.7499C12.4859 16.7499 12.899 16.5797 13.2394 16.2393C13.5798 15.899 13.75 15.4858 13.75 14.9999C13.75 14.514 13.5798 14.1009 13.2394 13.7605C12.899 13.4201 12.4859 13.25 12 13.25C11.5141 13.25 11.1009 13.4201 10.7606 13.7605C10.4202 14.1009 10.25 14.514 10.25 14.9999C10.25 15.4858 10.4202 15.899 10.7606 16.2393C11.1009 16.5797 11.5141 16.7499 12 16.7499ZM8.99997 8.49995H15V6.49995C15 5.66662 14.7083 4.95828 14.125 4.37495C13.5416 3.79162 12.8333 3.49995 12 3.49995C11.1666 3.49995 10.4583 3.79162 9.87497 4.37495C9.29164 4.95828 8.99997 5.66662 8.99997 6.49995V8.49995Z"
+              fill="#FFFEF2" />
+          </svg>
+          <span>안전 결제</span>
+        </p>
+
+        <p>
+
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.9682 4.10854L11.9592 4.10033L11.9502 4.10854C9.84499 6.03687 8.25673 7.81526 7.18584 9.44371C6.11502 11.0721 5.57855 12.5338 5.57855 13.8286C5.57855 15.7242 6.18102 17.2973 7.38636 18.547C8.59175 19.7967 10.1164 20.4214 11.9592 20.4214C13.802 20.4214 15.3266 19.7967 16.532 18.547C17.7374 17.2973 18.3398 15.7242 18.3398 13.8286C18.3398 12.5338 17.8034 11.0721 16.7325 9.44371C15.6617 7.81526 14.0734 6.03687 11.9682 4.10854ZM11.9573 21.9867C9.6885 21.9867 7.79772 21.2075 6.28402 19.6489C4.77026 18.0904 4.01327 16.1506 4.01327 13.8286C4.01327 12.1859 4.67072 10.384 5.98755 8.42271C7.30292 6.46356 9.29331 4.32851 11.9592 2.01755C14.6251 4.32851 16.6155 6.46356 17.9308 8.42271C19.2477 10.384 19.9051 12.1859 19.9051 13.8286C19.9051 16.1506 19.1475 18.0904 17.6325 19.6489C16.1175 21.2075 14.2261 21.9867 11.9573 21.9867Z"
+              fill="white" stroke="#FFFEF2" stroke-width="0.0265307" />
+          </svg>
+          <span>무료 샘플</span>
+        </p>
+
+        <p>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M3.924 9.5916H20.0739V22.0001H3.924V9.5916ZM5.42362 11.0912V20.5005H18.5743V11.0912H5.42362Z"
+              fill="#FFFEF2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M21.7269 5.87275V11.0822H2.27148V5.87276L21.7269 5.87275ZM3.7711 7.37237V9.58257H20.2272V7.37237L3.7711 7.37237Z"
+              fill="#FFFEF2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M11.979 5.47778L8.83892 2L7.72588 3.00498L11.2494 6.9074V21.2688H12.749V6.89229L16.0273 2.99282L14.8794 2.02781L11.979 5.47778Z"
+              fill="#FFFEF2" />
+          </svg>
+          <span>무료 선물 포장</span>
+        </p>
+      </div>
+
+      <!-- 푸터센터 -->
+      <div class="footer_center">
+        <div class="center_left">
+          <div class="center">
+            <h2>주문 및 지원</h2>
+            <ul>
+              <li><a href="#">문의하기</a></li>
+              <li><a href="#">자주 묻는 질문</a></li>
+              <li><a href="#">배송</a></li>
+              <li><a href="#">반품</a></li>
+              <li><a href="#">배송 조회하기</a></li>
+              <li><a href="#">주문 현황 조회</a></li>
+              <li><a href="#">개정약관</a></li>
+            </ul>
+          </div>
+
+          <div class="center">
+            <h2>서비스</h2>
+            <ul>
+              <li><a href="#">브랜드 스토리</a></li>
+              <li><a href="#">이솝 재단</a></li>
+              <li><a href="#">채용 정보</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">영상정보처리기기 운영/관리방침</a></li>
+              <li><a href="#">정품인증</a></li>
+              <li><a href="#">린스 앤 리턴</a></li>
+              <li><a href="#">쿠키 정책</a></li>
+              <li><a href="#">채용</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="center_right">
+          <ul>
+            <li><a href="#">
+                <svg width="24" height="24" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor"
+                    d="M75 0C54.631 0 52.077.086 44.078.451c-7.983.364-13.435 1.632-18.206 3.487-4.932 1.916-9.114 4.48-13.284 8.65s-6.734 8.352-8.65 13.284C2.083 30.642.815 36.095.45 44.078.086 52.078 0 54.63 0 75s.086 22.923.451 30.922c.364 7.983 1.632 13.435 3.487 18.206 1.916 4.932 4.48 9.114 8.65 13.284s8.352 6.734 13.284 8.65c4.77 1.855 10.223 3.123 18.206 3.487 8 .365 10.553.451 30.922.451s22.923-.086 30.922-.451c7.983-.364 13.435-1.632 18.206-3.486 4.932-1.917 9.114-4.481 13.284-8.65 4.17-4.17 6.734-8.353 8.65-13.285 1.855-4.77 3.123-10.223 3.487-18.206.365-8 .451-10.553.451-30.922s-.086-22.923-.451-30.922c-.364-7.983-1.632-13.435-3.486-18.206-1.917-4.932-4.481-9.114-8.65-13.284-4.17-4.17-8.353-6.734-13.285-8.65-4.77-1.855-10.223-3.123-18.206-3.487C97.922.086 95.37 0 75 0zm0 13.513c20.026 0 22.398.077 30.306.438 7.313.333 11.284 1.555 13.927 2.582 3.5 1.36 6 2.986 8.623 5.61 2.625 2.625 4.25 5.123 5.61 8.624 1.028 2.643 2.25 6.614 2.583 13.927.361 7.908.438 10.28.438 30.306 0 20.026-.077 22.398-.438 30.306-.333 7.313-1.555 11.284-2.582 13.927-1.36 3.5-2.986 6-5.61 8.623-2.625 2.625-5.123 4.25-8.624 5.61-2.643 1.028-6.614 2.25-13.927 2.583-7.907.361-10.279.438-30.306.438s-22.399-.077-30.306-.438c-7.313-.333-11.284-1.555-13.927-2.582-3.5-1.36-6-2.986-8.623-5.61-2.625-2.625-4.25-5.123-5.61-8.624-1.028-2.643-2.25-6.614-2.583-13.927-.361-7.908-.438-10.28-.438-30.306 0-20.026.077-22.398.438-30.306.333-7.313 1.555-11.284 2.582-13.927 1.36-3.5 2.986-6 5.61-8.623 2.625-2.625 5.123-4.25 8.624-5.61 2.643-1.028 6.614-2.25 13.927-2.583 7.908-.361 10.28-.438 30.306-.438zm0 22.974c-21.27 0-38.513 17.242-38.513 38.513 0 21.27 17.242 38.513 38.513 38.513 21.27 0 38.513-17.242 38.513-38.513 0-21.27-17.242-38.513-38.513-38.513zM75 100c-13.807 0-25-11.193-25-25s11.193-25 25-25 25 11.193 25 25-11.193 25-25 25zm49.035-65.035a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.969 10.157L23.707 0h-2.07l-7.588 8.82L7.99 0H1l9.164 13.336L1 23.988h2.07l8.013-9.314 6.4 9.314h6.989l-9.504-13.83h.001zm-2.836 3.297l-.929-1.328L3.817 1.559h3.18l5.962 8.528.929 1.328 7.75 11.085h-3.181l-6.324-9.046z"
+                    fill="#FFFEF2" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path fill="currentColor"
+                    d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./image/kakaotalk_sns_icon1.png" alt="kakaotalk_sns_icon1">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer_line"></div>
+
+      <!-- 푸터바텀 -->
+      <div class="footer_btm">
+        <div class="footer_btm_i">
+          <strong>
+            엘오케이(유) | 대표자 : REBELO PIZARRO RODRIGO ALVARO
+          </strong>
+          <strong>
+            사업자 번호 : 220-81-73483 통신판매업신고 : 2012-서울강남-01663 <a href="#">사업자정보확인하기</a>
+          </strong>
+          <strong>
+            주소 : 서울특별시 강남구 영동대로 517 아셈타워 31층 | 대표전화 : 1800-1987
+          </strong>
+          <p>
+            © Aesop
+          </p>
+          <p>
+            제이피모간 체이스은행 구매안전 서비스(채무지급보증) <br>
+            고객님은 안전거래를 위해 현금 결제한 금액에 대해 저희 쇼핑몰에서 가입한 제이피모간 체이스은행 구매안전서비스 (지급보증서) 를 이용하실 수 있습니다.
+          </p>
+        </div>
+
+        <div class="footer_link">
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">쿠키 세팅</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    </div>
+  </footer>
   <!-- footer -->
 </body>
 

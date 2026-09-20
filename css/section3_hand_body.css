@@ -36,10 +36,21 @@
   align-items: center;
 }
 
-/* 창문 */
+/* 보이는 카드박스 = 창문 */
 .view {
   width: 1168px;
   overflow: hidden;
+
+  cursor: grab;
+  user-select: none;
+}
+
+.view:active {
+  cursor: grabbing;
+}
+
+.view img {
+  pointer-events: none;
 }
 
 /* =========================
@@ -63,6 +74,7 @@
   position: relative;
   width: 100%;
   height: 376px;
+  cursor: pointer;
 }
 
 .card .imgbox .img_desc {
@@ -73,7 +85,7 @@
   color: #AB7E51;
 }
 
-.card .imgbox a{
+.card .imgbox a {
   display: block;
   width: 130px;
   height: 48px;
@@ -89,34 +101,91 @@
   opacity: 0;
 }
 
-.card .imgbox a:hover{
+.card .imgbox a:hover {
   background-color: #333;
   color: #fffef2;
 }
 
-.card .imgbox img{
+.card .imgbox img {
   position: absolute;
 }
 
-.card .imgbox .hoverimg{
+.card .imgbox .hoverimg {
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
-.card .imgbox:hover .hoverimg{
+.card .imgbox:hover .hoverimg {
   opacity: 1;
 }
 
-.card .imgbox:hover a{
+.card .imgbox:hover a {
   opacity: 1;
 }
 
+/* 카드 텍스트 */
 .cardtext {
   text-align: center;
+}
+
+.card_title {
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card_desc {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 40px;
+
+  display: block;
+  min-height: 42px;
+  /* line-height: 21px; */
+}
+
+/* 텍스트바텀 */
+.text_btm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.onesize_box {
+  position: relative;
+  width: 376px;
+  height: 42px;
 
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.onesize_box>.onesize {
+  position: absolute;
+  top: -8px;
+
+  padding: 0 4px;
+  background: #fffef2;
+
+  font-size: 12px;
+  color: #666;
+}
+
+.onesize_box>.ml {
+  font-size: 14px;
+}
+
+/* 장바구니담기 버튼 */
+.add {
+  width: 100%;
+  height: 48px;
+  color: #fffef2;
+  background-color: #333;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
 }
 
 /* =========================
@@ -131,8 +200,12 @@
   cursor: pointer;
 }
 
+.arrow i {
+  -webkit-text-stroke: 0.7px currentColor;
+}
+
 .arrow:disabled {
-  color: #666;
+  color: #aaa;
   cursor: not-allowed;
 }
 

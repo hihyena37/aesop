@@ -1,0 +1,146 @@
+/* =========================
+   01. 푸터
+========================= */
+footer {
+  width: 100%;
+  height: auto;
+  padding: 0 16px;
+
+  background-color: #252525;
+  color: #FFFEF2;
+}
+
+.footer_i {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   02. 푸터 탑
+========================= */
+.footer_top {
+  padding: 32px 30px;
+  font-size: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_top p {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* =========================
+   03. 푸터 센터
+========================= */
+.footer_center {
+  padding: 32px 15px;
+  font-size: 14px;
+
+  display: flex;
+}
+
+/* 푸터 센터 왼쪽 */
+.center_left {
+  display: flex;
+
+  width: calc((100%/3)*2);
+}
+
+.center_left .center {
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.center_left .center ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.center_left .center ul li:hover {
+  text-decoration: underline;
+}
+
+/* 푸터 센터 오른쪽 */
+.center_right ul {
+  display: flex;
+  gap: 28px;
+}
+
+.center_right ul li img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer_center h2 {
+  font-size: 18px;
+}
+
+/* 푸터라인 */
+.footer_line {
+  margin: 0 15px;
+  width: 100%;
+  height: 1px;
+  background-color: #FFFEF2;
+}
+
+/* =========================
+   04. 푸터 바텀
+========================= */
+.footer_btm {
+  padding: 32px 15px;
+  font-size: 12px;
+}
+
+.footer_btm_i {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding-bottom: 60px;
+}
+
+.footer_btm_i a {
+  text-decoration: underline;
+}
+
+
+/* 푸터링크 */
+.footer_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_link ul {
+  font-size: 11px;
+  display: flex;
+  gap: 8px;
+}
+
+.footer_link ul li {
+  display: flex;
+  align-items: center;
+}
+
+.footer_link ul li:hover {
+  text-decoration: underline;
+}
+
+.footer_link ul li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #FFFEF2;
+  border-radius: 50%;
+
+  margin-left: 8px;
+}
