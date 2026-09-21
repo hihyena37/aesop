@@ -1,4 +1,5 @@
 $(function () {
+
   // 헤더 스크롤
   const $header = $('header');
   let lastScroll = Math.max(0, $(window).scrollTop());
@@ -27,6 +28,7 @@ $(function () {
 
     // 다음 스크롤에서 방향을 비교하기 위해 저장
     lastScroll = currentScroll;
+    });
 
 
 
