@@ -38,7 +38,8 @@
 
 /* 보이는 카드박스 = 창문 */
 .view {
-  width: 1168px;
+  flex: 1;
+  min-width: 0;
   overflow: hidden;
 
   cursor: grab;
@@ -66,15 +67,22 @@
    04. 카드
 ========================= */
 .card {
-  width: 376px;
+  width: calc((100% - 40px) / 3);
   flex-shrink: 0;
 }
 
 .card .imgbox {
   position: relative;
   width: 100%;
-  height: 376px;
+  aspect-ratio: 1 / 1;
   cursor: pointer;
+}
+
+.card .imgbox img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .card .imgbox .img_desc {
@@ -104,10 +112,6 @@
 .card .imgbox a:hover {
   background-color: #333;
   color: #fffef2;
-}
-
-.card .imgbox img {
-  position: absolute;
 }
 
 .card .imgbox .hoverimg {
@@ -153,7 +157,7 @@
 
 .onesize_box {
   position: relative;
-  width: 376px;
+  width: 100%;
   height: 42px;
 
   display: flex;
@@ -189,7 +193,7 @@
 }
 
 /* =========================
-   05. 화살표
+   05. 화살표 & 막대
 ========================= */
 .arrow {
   width: 40px;
@@ -209,13 +213,16 @@
   cursor: not-allowed;
 }
 
+.card-pagination {
+  display: none;
+}
 
 /* =========================
    06. 사이즈 선택박스
 ========================= */
 .select_box {
   position: relative;
-  width: 376px;
+   width: 100%;
 }
 
 .select_box label {
@@ -263,4 +270,110 @@
 
   pointer-events: none;
   /* 마우스 클릭이나 hover 이벤트를 받지 않게 */
+}
+
+@media screen and (max-width: 63.99875em) {
+
+  .hand_body_i {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .allbox {
+    position: relative;
+    padding-bottom: 60px;
+  }
+
+  .view {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .allcard {
+    gap: 20px;
+  }
+
+  /* 카드 2개 */
+  .card {
+    width: calc((100% - 20px) / 2);
+    flex-shrink: 0;
+  }
+
+  /* 이미지 1:1 */
+  .card .imgbox {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .card .imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* hover 제거 */
+  .card .imgbox .hoverimg,
+  .card .imgbox:hover .hoverimg {
+    opacity: 0;
+  }
+
+  .card .imgbox a,
+  .card .imgbox:hover a {
+    display: none;
+  }
+
+  .select_box,
+  .onesize_box {
+    width: 100%;
+  }
+
+
+  /* =========================
+     하단 화살표
+  ========================= */
+
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .arrow-left {
+    left: 0;
+  }
+
+  .arrow-right {
+    right: 0;
+  }
+
+
+  /* =========================
+     가운데 막대
+  ========================= */
+
+  .card-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: -30px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .card-bar {
+    width: 32px;
+    height: 2px;
+    padding: 0;
+    border: 0;
+    background: #c7c7c0;
+    cursor: pointer;
+  }
+
+  .card-bar.active {
+    background: #333;
+  }
 }

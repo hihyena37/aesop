@@ -147,85 +147,162 @@ $(function () {
 
 
   ////////// 카드슬라이드 //////////
-  let index = 0;
+  let cardIndex = 0;
 
-  const cardWidth = 376;
+  const $view = $('.view');
+  const $allcard = $('.allcard');
+  const $cards = $('.card');
+  const $prev = $('.arrow-left');
+  const $next = $('.arrow-right');
+  const $bars = $('.card-bar');
+
   const gap = 20;
-  const move = cardWidth + gap;
-
-  const maxIndex = 2;
 
   let startX = 0;
-  let currentX = 0;
+  let dragX = 0;
   let isDragging = false;
 
-  function slide() {
-    $('.allcard').css({
-      transition: 'transform 0.3s ease',
-      transform: `translateX(-${index * move}px)`
-    });
 
-    $('.arrow-left').prop('disabled', index === 0);
-    $('.arrow-right').prop('disabled', index === maxIndex);
+  /* 현재 반응형인지 확인 */
+  function isResponsive() {
+    return window.innerWidth <= 1023;
   }
 
-  /* 오른쪽 버튼 */
-  $('.arrow-right').click(function () {
-    if (index < maxIndex) {
-      index++;
-      slide();
+
+  /* 현재 카드 실제 너비 */
+  function getCardWidth() {
+    return $cards.eq(0).outerWidth();
+  }
+
+
+  /* 마지막으로 이동 가능한 위치 */
+  function getMaxIndex() {
+    // 1024 이하: 2개씩 보이므로
+    // 1+2 / 2+3 / 3+4 / 4+5 = 4단계
+    if (isResponsive()) {
+      return 3;
+    }
+
+    // PC: 기존처럼 3개씩
+    return 2;
+  }
+
+
+  /* 슬라이드 이동 */
+  function slideCard() {
+    const move = getCardWidth() + gap;
+    const maxIndex = getMaxIndex();
+
+    // 화면 크기가 바뀌어서 index가 범위를 벗어난 경우
+    if (cardIndex > maxIndex) {
+      cardIndex = maxIndex;
+    }
+
+    $allcard.css({
+      transition: 'transform 0.3s ease',
+      transform: `translateX(-${cardIndex * move}px)`
+    });
+
+    // 화살표 상태
+    $prev.prop('disabled', cardIndex === 0);
+    $next.prop('disabled', cardIndex === maxIndex);
+
+    // 1024 이하 막대 상태
+    $bars.each(function (i) {
+      $(this).toggleClass('active', i === cardIndex);
+    });
+  }
+
+
+  /* 다음 버튼 */
+  $next.on('click', function () {
+    const maxIndex = getMaxIndex();
+
+    if (cardIndex < maxIndex) {
+      cardIndex++;
+      slideCard();
     }
   });
 
-  /* 왼쪽 버튼 */
-  $('.arrow-left').click(function () {
-    if (index > 0) {
-      index--;
-      slide();
+
+  /* 이전 버튼 */
+  $prev.on('click', function () {
+    if (cardIndex > 0) {
+      cardIndex--;
+      slideCard();
     }
   });
+
+
+  /* 막대 버튼 */
+  $bars.on('click', function () {
+    // 막대는 1024 이하에서만 사용
+    if (!isResponsive()) return;
+
+    cardIndex = $bars.index(this);
+    slideCard();
+  });
+
 
   /* 드래그 시작 */
-  $('.view').on('mousedown', function (e) {
+  $view.on('mousedown', function (e) {
     isDragging = true;
-    startX = e.pageX;
 
-    $('.allcard').css('transition', 'none');
+    startX = e.pageX;
+    dragX = 0;
+
+    $allcard.css('transition', 'none');
   });
+
 
   /* 드래그 중 */
   $(document).on('mousemove', function (e) {
     if (!isDragging) return;
 
-    currentX = e.pageX - startX;
+    dragX = e.pageX - startX;
 
-    const baseX = -(index * move);
+    const move = getCardWidth() + gap;
+    const baseX = -(cardIndex * move);
 
-    $('.allcard').css(
+    $allcard.css(
       'transform',
-      `translateX(${baseX + currentX}px)`
+      `translateX(${baseX + dragX}px)`
     );
   });
+
 
   /* 드래그 끝 */
   $(document).on('mouseup', function () {
     if (!isDragging) return;
 
-    if (currentX < -80 && index < maxIndex) {
-      index++;
+    const maxIndex = getMaxIndex();
+
+    // 왼쪽으로 드래그 = 다음
+    if (dragX < -80 && cardIndex < maxIndex) {
+      cardIndex++;
     }
 
-    if (currentX > 80 && index > 0) {
-      index--;
+    // 오른쪽으로 드래그 = 이전
+    else if (dragX > 80 && cardIndex > 0) {
+      cardIndex--;
     }
 
     isDragging = false;
-    currentX = 0;
+    dragX = 0;
 
-    slide();
+    // 정확한 카드 위치로 스냅
+    slideCard();
   });
 
-  slide();
+
+  /* 화면 크기가 바뀌었을 때 다시 계산 */
+  $(window).on('resize', function () {
+    slideCard();
+  });
+
+
+  /* 최초 실행 */
+  slideCard();
 
 
   ////////// 시그니처 영상 버튼 //////////
