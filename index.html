@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./css/section4_master_hand.css">
   <link rel="stylesheet" href="./css/section5_perfume.css">
   <link rel="stylesheet" href="./css/section6_signature.css">
+  <link rel="stylesheet" href="./css/section7_we.css">
   <link rel="stylesheet" href="./css/footer.css">
   <script src="./js/jquery-4.0.0.min.js"></script>
   <script src="./js/script.js"></script>
@@ -64,7 +65,8 @@
             </li>
 
             <!-- 마이아이콘(반응형일때부터 보임) -->
-            <li class="my"><button type="button">
+            <li class="my">
+              <button type="button" aria-label="마이페이지">
                 <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="currentColor"
                     d="M437.02 330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521 243.251 404 198.548 404 148 404 66.393 337.607 0 256 0S108 66.393 108 148c0 50.548 25.479 95.251 64.262 121.962-36.21 12.495-69.398 33.136-97.281 61.018C26.629 379.333 0 443.62 0 512h40c0-119.103 96.897-216 216-216s216 96.897 216 216h40c0-68.38-26.629-132.667-74.98-181.02zM256 256c-59.551 0-108-48.448-108-108S196.449 40 256 40s108 48.448 108 108-48.449 108-108 108z" />
@@ -594,27 +596,89 @@
   <!-- header -->
 
   <!-- hero -->
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="./mv/aesop_hero.mp4" type="video/mp4">
-    </video>
+  <section class="hero" aria-label="이솝 캠페인">
+    <div class="hero-track">
 
-    <div class="hero_i">
-      <span>이솝 하비스트 캠페인</span>
-      <h2>서로의 유대가 영그는 계절</h2>
-      <p>
-        하나되어 모여 앉는 추석, 사람들 사이 엮인 시간과 정성을 가만히 떠올려 봅니다. <br>
-        올가을에는&nbsp;낱낱의&nbsp;짚을&nbsp;한&nbsp;올&nbsp;한&nbsp;올&nbsp;엮어내는&nbsp;짚풀공예와&nbsp;함께&nbsp;한&nbsp;지붕&nbsp;아래&nbsp;깃드는&nbsp;안온함과&nbsp;이웃의&nbsp;온정을&nbsp;이야기합니다.&nbsp;&nbsp;
-      </p>
-      <a class="more" href="#">
-        <div class="more_i">
-          <span>자세히 알아보기</span>
-          <svg width="16" height="14" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M8.36.56l5.307 5.444-5.307 5.39H6.6l4.8-4.767H.333v-1.3H11.4L6.6.56h1.76z"
-              fill="#333" />
-          </svg>
+      <!-- 첫 번째 슬라이드: 영상 -->
+      <div class="hero-slide" aria-hidden="false">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src="./mv/aesop_hero.mp4" type="video/mp4">
+        </video>
+
+        <!-- 버튼 -->
+        <div class="hero-video-controls">
+          <!-- 재생 / 일시정지 버튼 -->
+          <button class="hero-play-btn" type="button" aria-label="영상 일시정지">
+            <i class="bi bi-pause-fill" aria-hidden="true"></i>
+          </button>
+
+          <!-- 음소거 버튼 -->
+          <button class="hero-sound-btn" type="button" aria-label="음소거 해제">
+            <i class="bi bi-volume-mute-fill" aria-hidden="true"></i>
+          </button>
         </div>
-      </a>
+
+        <div class="hero_i">
+          <span>이솝 하비스트 캠페인</span>
+          <h2>서로의 유대가 영그는 계절</h2>
+          <p>
+            하나되어 모여 앉는 추석, 사람들 사이 엮인 시간과 정성을 가만히 떠올려 봅니다.<br>
+            올가을에는 낱낱의 짚을 한 올 한 올 엮어내는 짚풀공예와 함께
+            한 지붕 아래 깃드는 안온함과 이웃의 온정을 이야기합니다.
+          </p>
+          <a class="more" href="#">
+            <div class="more_i">
+              <span>자세히 알아보기</span>
+              <svg width="16" height="14" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M8.36.56l5.307 5.444-5.307 5.39H6.6l4.8-4.767H.333v-1.3H11.4L6.6.56h1.76z"
+                  fill="#333" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 두 번째 슬라이드: 이미지 -->
+      <div class="hero-slide" aria-hidden="true" inert>
+        <img class="hero-image" src="./image/heroimg.jpg" alt="이솝 하비스트 캠페인">
+
+        <div class="hero_i">
+          <span>추석을 기념하며</span>
+          <h2>하나 되어 모여 앉는 자리</h2>
+          <p>
+            한정 기간 동안, 제품을 구매하시는 분들께 이솝 북마크를 증정합니다.<br>
+            사람과 사람 사이의 단단한 유대, 그리고 한 지붕 아래 다시 모인 이들이
+            나누는 온기를 기념하는 이솝의 정성 어린 기프트를 만나보세요.
+          </p>
+          <a class="more" href="#">
+            <div class="more_i">
+              <span>자세히 알아보기</span>
+              <span aria-hidden="true">→</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 양옆 화살표 -->
+    <div class="hero-arrows">
+      <button class="hero-prev hero-arrow" type="button" aria-label="이전 슬라이드">
+        ‹
+      </button>
+
+      <button class="hero-next hero-arrow" type="button" aria-label="다음 슬라이드">
+        ›
+      </button>
+    </div>
+
+    <!-- 하단 막대 표시 -->
+    <div class="hero-pagination" aria-label="슬라이드 선택">
+      <button class="hero-bar active" type="button" aria-label="첫 번째 슬라이드" aria-current="true">
+      </button>
+
+      <button class="hero-bar" type="button" aria-label="두 번째 슬라이드" aria-current="false">
+      </button>
     </div>
   </section>
   <!-- hero -->
@@ -967,9 +1031,30 @@
       <video class="signature-video" autoplay muted loop playsinline>
         <source src="./mv/signature.mp4" type="video/mp4">
       </video>
+
+      <div class="signature-video-controls">
+        <!-- 재생 / 일시정지 -->
+        <button class="signature-play-btn" type="button" aria-label="영상 일시정지">
+          <i class="bi bi-pause-fill" aria-hidden="true"></i>
+        </button>
+
+        <!-- 음소거 -->
+        <button class="signature-sound-btn" type="button" aria-label="음소거 해제">
+          <i class="bi bi-volume-mute-fill" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
   </section>
   <!-- section6 시그니처 기프팅 -->
+
+  <!-- section7 we-->
+  <div class="we">
+    <div class="we_i">
+      <h2>'모두 다 ‘나’가 아니고 ‘우리’였다.'</h2>
+      <p>피천득</p>
+    </div>
+  </div>
+  <!-- section7 we -->
 
 
   <!-- footer -->

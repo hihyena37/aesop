@@ -144,3 +144,47 @@ footer {
 
   margin-left: 8px;
 }
+
+/* =========================
+   . 반응형
+========================= */
+@media screen and (max-width: 63.99875em) {
+  footer {
+    padding: 16px 0;
+  }
+
+  .footer_top {
+    padding: 32px 16px;
+
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .footer_center {
+    padding: 16px 15px;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .center_left {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .center_left .center {
+    gap: 20px;
+  }
+
+  .footer_link ul li:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 1px;
+    background: #FFFEF2;
+
+    margin-left: 8px;
+  }
+
+}

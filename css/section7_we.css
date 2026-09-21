@@ -1,0 +1,39 @@
+.we {
+  width: 100%;
+  padding: 50px 0;
+  margin-bottom: 100px;
+}
+
+.we_i {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.we_i h2 {
+  font-size: 31px;
+  font-weight: 400;
+
+  margin-bottom: 10px;
+}
+
+.we_i p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   . 반응형
+========================= */
+/* 1024 */
+@media screen and (max-width: 63.99875em) {
+  .we {
+    padding: 80px 0;
+    margin-bottom: 30px;
+  }
+
+  .we_i h2 {
+    font-size: 25px;
+  }
+
+}

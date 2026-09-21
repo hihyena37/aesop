@@ -75,3 +75,37 @@
 
   font-size: 14px;
 }
+
+/* =========================
+   . 반응형
+========================= */
+/* 1024 */
+@media screen and (max-width: 63.99875em) {
+  .perfume {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .perfume_left {
+    width: 100%;
+    height: min(100vh, 100vw);
+    overflow: hidden;
+  }
+
+  .perfume_left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 85% center;
+    display: block;
+  }
+
+  .perfume_right {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .perfume .show {
+    width: 100%;
+  }
+}
