@@ -36,7 +36,7 @@ img {
 }
 
 /* =========================
-   02. 헤더
+   01. 헤더
 ========================= */
 header {
   width: 100%;
@@ -221,6 +221,10 @@ header:hover .header_top .header_center .logo img:nth-child(2) {
   margin-bottom: 16px;
 }
 
+.submenu_inner .submenu_visual .hair{
+  width: 260px;
+}
+
 /* =========================
    05. 라이브러리 서브메뉴
 ========================= */
@@ -321,7 +325,119 @@ header:hover .header_btm .search_box {
 /* =========================
    . 헤더 스크롤
 ========================= */
+header.scrolled {
+  position: fixed;
+  height: 64px;
+  background-color: #FFFEF2;
+  color: #333333;
+  transition: transform .3s ease;
+}
 
+/* 아래로 스크롤할 때 화면 위로 숨기기 */
+header.scrolled.hide {
+  transform: translateY(-100%);
+}
+
+/* 로고 / 메뉴 / 아이콘을 한 줄로 배치 */
+header.scrolled .header_i {
+  height: 100%;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+}
+
+/* 안쪽 요소들이 header_i의 grid 배치에 참여하도록 */
+header.scrolled .header_top {
+  display: contents;
+}
+
+/* 위쪽 텍스트 메뉴 숨기기 */
+header.scrolled .header_left,
+header.scrolled .header_right {
+  display: none;
+}
+
+/* 로고는 첫 번째 칸 */
+header.scrolled .header_center {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* 로고 크기 줄이기 */
+header.scrolled .header_top .header_center .logo,
+header.scrolled .header_top .header_center .logo img {
+  width: 100px;
+  height: 46px;
+}
+
+/* 흰색 로고 숨기기 */
+header.scrolled .header_top .header_center .logo img:first-child {
+  display: none;
+}
+
+/* 검정 로고 보이기 */
+header.scrolled .header_top .header_center .logo img:nth-child(2) {
+  display: block;
+}
+
+/* 메뉴는 두 번째 칸 */
+header.scrolled .header_btm {
+  grid-column: 2;
+  grid-row: 1;
+
+  width: 100%;
+  max-width: none;
+  height: 64px;
+  margin: 0;
+}
+
+/* 메뉴 간격 조정 */
+header.scrolled .mainmenu {
+  padding: 0;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+header.scrolled .mainmenu > .main_li > .main_link {
+  padding: 0 10px;
+}
+
+/* 기존 검색 박스 숨기기 */
+header.scrolled .search_box {
+  display: none;
+}
+
+/* 아이콘은 세 번째 칸 */
+header.scrolled .header_right_icon {
+  display: block;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+header.scrolled .header_right_icon ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+header.scrolled .header_right_icon button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* 데스크톱에서는 검색과 장바구니만 표시 */
+header.scrolled .header_right_icon .my,
+header.scrolled .header_right_icon .ham {
+  display: none;
+}
 
 
 /* =========================
